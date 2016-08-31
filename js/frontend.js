@@ -65,30 +65,6 @@ var CurrentTime = React.createClass({
     }
 });
 
-var ElapsedTime = React.createClass({
-    getInitialState: function() {
-        return {secondsElapsed: 0};
-    },
-
-    tick: function() {
-        this.setState({secondsElapsed: this.state.secondsElapsed + 1});
-    },
-
-    componentDidMount: function() {
-        this.interval = setInterval(this.tick, 1000);
-    },
-
-    componentWillUnmount: function() {
-        clearInterval(this.interval);
-    },
-
-    render: function() {
-        return (
-            <span>REC 00:00:{this.state.secondsElapsed}</span>
-        );
-    }
-});
-
 ReactDOM.render(
     <CurrentDate />,
     document.getElementById('date')
@@ -97,9 +73,4 @@ ReactDOM.render(
 ReactDOM.render(
     <CurrentTime />,
     document.getElementById('time')
-);
-
-ReactDOM.render(
-    <ElapsedTime />,
-    document.getElementById('rec')
 );

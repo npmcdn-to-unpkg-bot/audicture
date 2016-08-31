@@ -58,7 +58,8 @@ a {
   position: relative;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 94%; }
+  width: 94%;
+  z-index: 8; }
 
 .camera-corner {
   position: absolute; }
@@ -70,8 +71,9 @@ a {
     font-size: 3rem;
     vertical-align: top; }
   .camera-corner #rec {
+    animation: blink 1.2s linear infinite;
     margin-left: 3rem;
-    margin-top: -1.7rem; }
+    margin-top: -1.5rem; }
     .camera-corner #rec:before {
       background: #f44336;
       border-radius: 50%;
@@ -79,8 +81,15 @@ a {
       display: inline-block;
       height: 3rem;
       margin-right: 2rem;
-      transform: translateY(0.5rem);
+      transform: translateY(0.3rem);
       width: 3rem; }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
   .camera-corner #date {
     margin-left: 3.2rem;
     transform: translateY(0.7rem);
@@ -119,5 +128,16 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10; }
+
+/* --- VIDEO --- */
+video {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transform: scale(1.5);
+  left: 0;
+  width: 100vw; }
 
 /*# sourceMappingURL=styles.css.map */
