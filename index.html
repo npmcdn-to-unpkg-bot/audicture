@@ -3,8 +3,38 @@
     <head>
         <meta charset="utf-8">
         <title>audicture media</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
+        <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
+        <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+        <script src="https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"></script>
+        <script src="js/frontend.js" type="text/babel"></script>
     </head>
     <body>
-        <h2>audicture</h2>
+        <div class="entry-wrapper">
+            <h1>Hallo. Wir machen Videos</h1>
+            <a href="#" class="btn btn-red">Lern uns kennen</a>
+        </div>
+
+        <div class="camera-screen">
+            <div class="camera-corner top-left">
+                <img src="img/corner.svg" alt="" />
+                <span id="rec">REC 00:00:00</span>
+            </div>
+            <div class="camera-corner top-right">
+                <img src="img/corner.svg" alt="" />
+            </div>
+
+            <img src="img/logo.png" class="logo" alt="Logo" />
+
+            <div class="camera-corner bottom-right">
+                <span id="time"></span>
+                <img src="img/corner.svg" alt="" />
+            </div>
+            <div class="camera-corner bottom-left">
+                <img src="img/corner.svg" alt="" />
+                <span id="date"></span>
+            </div>
+        </div>
     </body>
 </html>
