@@ -9,6 +9,10 @@ var CurrentDate = React.createClass({
             month = "0" + month;
         }
 
+        if(day < 10) {
+            day = "0" + day;
+        }
+
         return (
             <span>DATE {day}/{month}/{year}</span>
         );
